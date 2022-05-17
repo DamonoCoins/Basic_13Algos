@@ -7,6 +7,8 @@ Console.WriteLine();
 Console.ReadKey();
 Console.Clear();
 
+// Make a Menu to select Algorithms
+
 //      1.)
 Console.WriteLine("1.) Print Numbers\n" +
     "  (...press any key to continue...)");
