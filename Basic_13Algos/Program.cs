@@ -1,92 +1,151 @@
 ﻿////        Assignment: Basic 13
 //// Write these as static functions callable from Program.cs.
 ///
-Console.WriteLine("Welcome to my Basic 13 C# Algorithms.\n" +
-    "  (...press any key to continue...)");
-Console.WriteLine();
-Console.ReadKey();
-Console.Clear();
 
-// Make a Menu to select Algorithms
-
-//      1.)
-Console.WriteLine("1.) Print Numbers\n" +
-    "  (...press any key to continue...)");
-Console.ReadLine();
-PrintNumbers();
-Console.ReadLine();
-Console.Clear();
-
-//      2.)
-Console.WriteLine("2.) Print Odd Numbers\n" +
-    "  (...press any key to continue...)");
-Console.ReadLine();
-PrintOdds();
-Console.ReadLine();
-Console.Clear();
-
-//      3.)
-Console.WriteLine("3.) Print Sum\n" +
-    "  (...press any key to continue...)");
-Console.ReadLine();
-PrintSum();
-Console.ReadLine();
-Console.Clear();
-
-//      4.)
-LoopArray(new int[] { 1, 2, 3, 4, 5 });
-Console.ReadLine();
-Console.Clear();
-
-//      5.)
-FindMax(new int[] { -3, -5, -7 });
-Console.ReadLine();
-Console.Clear();
-
-//      6.)
-GetAverage(new int[] { 2, 10, 3 });
-Console.ReadLine();
-Console.Clear();
-
-//      7.)
-Console.WriteLine("7.) Create Array of Odd Numbers\n" +
-    "  (...press any key to continue...)");
-Console.ReadLine();
-OddArray();
-Console.ReadLine();
-Console.Clear();
-
-//      8.)
-Console.WriteLine(GreaterThanY(new int[] { 1, 3, 5, 7 }, 3));
-Console.ReadLine();
-Console.Clear();
-
-//      9.)
-SquareArrayValues(new int[] { 1, 5, 10, -10 });
-Console.ReadLine();
-Console.Clear();
-
-//      10.)
-EliminateNegatives(new int[] { 1, 5, 10, -2 });
-Console.ReadLine();
-Console.Clear();
+Menu();
 
 
-//      11.)
-MinMaxAverage(new int[] { 1, 5, 10, -2 });
-Console.ReadLine();
-Console.Clear();
 
-//      12.)
-ShiftValues(new int[] { 1, 5, 10, 7, -2 });
-Console.ReadLine();
-Console.Clear();
+void Menu()
+{
+    Console.WriteLine("Welcome to my Basic 13 C# Algorithms.\n");
+    Console.WriteLine("Enter number of your selection:\n");
 
-//      13.)
-NumToString(new int[] { -1, -3, 2 });
-Console.ReadLine();
-Console.Clear();
+    Console.WriteLine(
+    " 1.) Print Numbers\n" +
+    " 2.) Print Odd Numbers\n" +
+    " 3.) Print Sum\n" +
+    " 4.) Loop through an Array\n" +
+    " 5.) Find Max Number\n" +
+    " 6.) Get Average Number\n" +
+    " 7.) Create Array of Odd Numbers\n" +
+    " 8.) Get Numbers Greater than \"Y\"\n" +
+    " 9.) Square Values of an Array\n" +
+    " 10.) Eliminate and Replace Negative values\n" +
+    " 11.) Get Minimun, Maximum, and Average Number of an Array\n" +
+    " 12.) Shift Values\n" +
+    " 13.) Return String\n\n" +
+    " 0.) Exit");
 
+    string input = Console.ReadLine();
+    switch (input)
+    {
+        case "1":
+            Console.Clear();
+            PrintNumbers();
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "2":
+            Console.Clear();
+            PrintOdds();
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "3":
+            Console.Clear();
+            PrintSum();
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "4":
+            Console.Clear();
+            LoopArray(new int[] { 1, 2, 3, 4, 5 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "5":
+            Console.Clear();
+            FindMax(new int[] { -3, -5, -7 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "6":
+            Console.Clear();
+            GetAverage(new int[] { 2, 10, 3 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "7":
+            Console.Clear();
+            OddArray();
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "8":
+            Console.Clear();
+            Console.WriteLine(GreaterThanY(new int[] { 1, 3, 5, 7 }, 3));
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "9":
+            Console.Clear();
+            SquareArrayValues(new int[] { 1, 5, 10, -10 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "10":
+            Console.Clear();
+            EliminateNegatives(new int[] { 1, 5, 10, -2 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "11":
+            Console.Clear();
+            MinMaxAverage(new int[] { 1, 5, 10, -2 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "12":
+            Console.Clear();
+            ShiftValues(new int[] { 1, 5, 10, 7, -2 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "13":
+            Console.Clear();
+            NumToString(new int[] { -1, -3, 2 });
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+            break;
+
+        case "0":
+            Console.Clear();
+            break;
+
+        default:
+            Console.Clear();
+            Menu();
+            break;
+    }
+}
+////        //////////////////////////////////////
+//// Methods
 
 
 // 1.)
